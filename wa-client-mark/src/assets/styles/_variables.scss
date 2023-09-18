@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,700;1,300;1,400&family=Raleway:ital,wght@0,300;0,700;1,300&family=Rubik:wght@300;400;600&family=Sofia+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+$accent: #a200ff;
+$white: white;
+$black: black;
+$hard-dark-accent: darkest($accent, 30%);
+$dark-accent: darkest($accent, 15%);
+
+$bx-accent: 0 4px 4px rgba($accent, 0.25);
+$bx-16: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+$default-font: 'Open Sans', sans-serif;
+
+$mobile: 480px;

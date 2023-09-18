@@ -1,0 +1,30 @@
+@import 'src/assets/styles/variables';
+
+.input {
+	background: rgba(162, 0, 255, 0.4);
+	border: 1px solid transparent;
+	color: $white;
+	font-size: 16px;
+	padding: 14px;
+	border-radius: 10px;
+	margin-bottom: 1.2rem;
+	outline: none;
+	width: 100%;
+
+	&:focus {
+		transition: background-color 0.15s ease;
+		background: #7603bc;
+	}
+
+	&::placeholder {
+		color: white;
+		opacity: 0.5;
+	}
+}
+
+.error {
+	color: #8d2b3d;
+	font-size: 0.8rem;
+	margin-top: 0.1rem;
+	margin-bottom: 0.4rem;
+}
