@@ -18,6 +18,7 @@ const Auth = () => {
 		<>
 			<Layout heading='Sign in' bgImage='/images/auth_bg.jpeg' />
 			<div className='wrapper-inner-page'>
+				{isLoading && <Loader />}
 				<form onSubmit={handleSubmit(onSubmit)}>
 					<Field
 						error={errors?.email?.message}
