@@ -1,15 +1,27 @@
 import Loader from '../../ui/Loader'
 import { Alert } from '../../ui/alert/Alert'
 
+import { useCompleteLog } from './hooks/useCompleteLog'
 import { useExerciseLog } from './hooks/useExerciseLog'
 
+import ExerciseError from './ExerciseError'
 import styles from './ExerciseLog.module.scss'
 import HeaderExerciseLog from './HeaderExerciseLog'
 import TableHeader from './table/TableHeader'
 import TableRow from './table/TableRow'
 
 const ExerciseLog = () => {
-	const { exerciseLog, isLoading, isSuccess } = useExerciseLog()
+	const {
+		exerciseLog,
+		isLoading,
+		isSuccess,
+		errorChange,
+		getState,
+		onChangeState,
+		toggleTime
+	} = useExerciseLog()
+
+	const { completeLog, errorCompleted } = useCompleteLog()
 
 	return (
 		<>
@@ -18,15 +30,20 @@ const ExerciseLog = () => {
 				className='wrapper-inner-page'
 				style={{ paddingLeft: 0, paddingRight: 0 }}
 			>
-				{/* <ExerciseError errors={[errorChange,
-errorCompleted]} /> */}
+				<ExerciseError errors={[errorChange, errorCompleted]} />
 				{isLoading ? (
 					<Loader />
 				) : (
 					<div className={styles.wrapper}>
 						<TableHeader />
-						{exerciseLog?.times.map((item, index) => (
-							<TableRow item={item} key={item.id} />
+						{exerciseLog?.times.map(item => (
+							<TableRow
+								getState={getState}
+								onChangeState={onChangeState}
+								toggleTime={toggleTime}
+								item={item}
+								key={item.id}
+							/>
 						))}
 					</div>
 				)}
