@@ -9,7 +9,7 @@
 	> div.item {
 		margin: 0 auto;
 		margin-bottom: 30px;
-		background-color: $dark-accent;
+		background-color: $accent;
 		color: $white;
 		width: 90%;
 		border-radius: 10px;
@@ -33,7 +33,7 @@
 		}
 
 		&.completed {
-			background-color: $hard-dark-accent;
+			background-color: $bx-16;
 		}
 	}
 
