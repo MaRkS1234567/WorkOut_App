@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 
 export const useCheckAuth = () => {
 	const { isAuth, setIsAuth } = useAuth()
-	const { pathname } = useLocation()
+	const { pathname, navigate } = useLocation()
 
 	useEffect(() => {
 		const token = Cookies.get(TOKEN)

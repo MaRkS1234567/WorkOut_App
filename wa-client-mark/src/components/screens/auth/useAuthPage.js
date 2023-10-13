@@ -7,8 +7,6 @@ import authService from '../../../services/auth.service'
 
 export const useAuthPage = () => {
 	const [type, setType] = useState('auth')
-	const isLoadingA = false
-	const isLoadingAuth = false
 	const {
 		register,
 		handleSubmit,

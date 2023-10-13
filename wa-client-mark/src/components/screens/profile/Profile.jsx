@@ -14,7 +14,7 @@ const Profile = () => {
 		<>
 			<div
 				className={cn(stylesLayout.wrapper, stylesLayout.otherPage)}
-				style={{ backgroundImage: `url('/images/auth_bg.jpeg')`, height: 356 }}
+				style={{ height: 356 }}
 			>
 				<Header />
 
@@ -24,27 +24,11 @@ const Profile = () => {
 					) : (
 						<>
 							<AiOutlineUser size={40} />
-							{/* <img
-							src='images/header/user.svg'
-							alt='Profile'
-							height='56'
-							draggable={false}
-						/> */}
 							<h1 className={stylesLayout.heading}>{data?.email}</h1>
 						</>
 					)}
 				</div>
 				<Statistics />
-			</div>
-			<div className={styles.before_after}>
-				<div>
-					<div className={styles.heading}>Before</div>
-					<img src='/images/before.jpg' />
-				</div>
-				<div>
-					<div className={styles.heading}>After</div>
-					<img src='/images/after.jpg' />
-				</div>
 			</div>
 		</>
 	)

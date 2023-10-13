@@ -42,7 +42,7 @@ const NewWorkout = () => {
 					/>
 
 					<Link to='/new-exercise' className='dark-link'>
-						Add new exercise
+						+ Add new exercise
 					</Link>
 
 					<SelectExercises control={control} />

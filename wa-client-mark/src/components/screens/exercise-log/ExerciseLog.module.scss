@@ -12,7 +12,7 @@
 
 .wrapper {
 	border-radius: 10px;
-	background-color: #2c0050;
+	background-color: #460372;
 	margin: 0 auto;
 	width: 90%;
 
@@ -68,8 +68,8 @@
 
 			&:nth-child(2) {
 				width: 50%;
-				border-left: 1px solid #d145ed;
-				border-right: 1px solid #d145ed;
+				border-left: 1px solid #a201ff;
+				border-right: 1px solid #a201ff;
 				@media (max-width: $mobile) {
 					width: 40%;
 				}
@@ -77,7 +77,7 @@
 		}
 
 		&:first-child {
-			border-bottom: 1px solid #d145ed;
+			border-bottom: 1px solid #a201ff;
 			@media (max-width: $mobile) {
 				> div > span {
 					font-size: 14px;
